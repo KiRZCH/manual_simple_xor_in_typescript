@@ -29,37 +29,37 @@ import {Binary, xor} from "./binary";
  */
 describe("XOR", () => {
 
-    test("Mi aspetto che restituisca il giusto tipo", () => {
+    test("returns the expected type", () => {
         expectTypeOf(xor([1,1], [1,0]))
             .toEqualTypeOf<Binary[]>();
     })
 
-    test("XOR tra due array della stessa lunghezza", () => {
+    test("XOR between two arrays of the same length", () => {
         expect(xor([0,1,1,1,0], [1,1,0,0,1]))
             .toEqual([1,0,1,1,1]);
     });
 
-    test("XOR tra due array di lunghezza diversa", () => {
+    test("XOR between two arrays of different lengths", () => {
         expect(xor([1,0,1], [1]))
             .toEqual([1,0,0]);
     });
 
-    test("XOR tra due array identici", () => {
+    test("XOR between two identical arrays", () => {
         expect(xor([1,0,1], [1,0,1]))
             .toEqual([0,0,0])
     });
 
-    test("XOR tra due array vuoti", () => {
+    test("XOR between two empty arrays", () => {
         expect(() => xor([],[]))
             .toThrow(Error)
     });
 
-    test("XOR tra sorgente vuota e chiave non", () => {
+    test("XOR between an empty source and a non-empty key", () => {
         expect(() => xor([],[1,0,1,1]))
             .toThrow(Error)
     });
 
-    test("XOR tra chiave vuota e sorgente non", () => {
+    test("XOR between a non-empty source and an empty key", () => {
         expect(() => xor([1,0,1,1],[]))
             .toThrow(Error)
     });

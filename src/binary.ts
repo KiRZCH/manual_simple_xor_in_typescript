@@ -22,7 +22,7 @@ export type Binary = 0 | 1
 
 export function xor(source: Binary[], key: Binary[]): Binary[] {
     if (source.length == 0 || key.length == 0) {
-        throw new Error("Gli array non possono essere vuoti")
+        throw new Error("Arrays cannot be empty")
     }
     let result: Binary[] = []
     // Normalization
