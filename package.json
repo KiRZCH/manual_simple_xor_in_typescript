@@ -1,0 +1,17 @@
+{
+  "name": "manual_simple_xor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  },
+  "private": true
+}

@@ -1,0 +1,15 @@
+TAP version 13
+1..1
+ok 1 - src/binary.test.ts # time=2.52ms {
+    1..1
+    ok 1 - XOR # time=2.02ms {
+        1..7
+        ok 1 - Mi aspetto che restituisca il giusto tipo # time=0.74ms
+        ok 2 - XOR tra due array della stessa lunghezza # time=0.46ms
+        ok 3 - XOR tra due array di lunghezza diversa # time=0.11ms
+        ok 4 - XOR tra due array identici # time=0.08ms
+        ok 5 - XOR tra due array vuoti # time=0.17ms
+        ok 6 - XOR tra sorgente vuota e chiave non # time=0.08ms
+        ok 7 - XOR tra chiave vuota e sorgente non # time=0.07ms
+    }
+}
