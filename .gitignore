@@ -1,5 +1,6 @@
 /tmp
 /out-tsc
+vitest/**
 
 /node_modules
 npm-debug.log*
