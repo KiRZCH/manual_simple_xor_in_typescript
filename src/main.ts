@@ -65,7 +65,8 @@ function bitDimensionInteger(question: string): Binary | null {
 /**
  * **main**
  *
- * you know what it does
+ * @import {Binary, xor} from "./binary.ts"
+ *
  * @returns nothing
  */
 function main(): void {
