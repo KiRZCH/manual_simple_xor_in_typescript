@@ -1,9 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.xor = xor;
 // TODO: Nothing
 // Console Clear
-console.clear();
+// console.clear()
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.xor = xor;
 // Functions
 /**
  * **XOR calculation** between 2 sequence of bits
@@ -26,7 +26,7 @@ function xor(source, key) {
     for (let i = 0; i < length; i++) {
         const n_source = (_a = source[source.length - length + i]) !== null && _a !== void 0 ? _a : 0;
         const n_key = (_b = key[key.length - length + i]) !== null && _b !== void 0 ? _b : 0;
-        result.push((n_source ^ n_key));
+        result.push(n_source != n_key ? 1 : 0);
     }
     return result;
 }
@@ -35,7 +35,8 @@ function xor(source, key) {
     Crash!
     console.log(xor([],[]))
     console.log(xor([0,1,1,1,1],[]))
-*/
-console.log(xor([0, 1, 1, 1, 0], [1, 1, 0, 0, 1]));
-console.log(xor([1, 1, 1, 0, 0, 0], [1, 1]));
-console.log(xor([0, 1], [1, 0, 0, 1, 1, 1]));
+
+console.log(xor([0,1,1,1,0],[1,1,0,0,1]))
+console.log(xor([1,1,1,0,0,0],[1,1]))
+console.log(xor([0,1],[1,0,0,1,1,1]))
+*/ 
