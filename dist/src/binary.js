@@ -18,7 +18,7 @@ exports.xor = xor;
 function xor(source, key) {
     var _a, _b;
     if (source.length == 0 || key.length == 0) {
-        throw new Error("Gli array non possono essere vuoti");
+        throw new Error("Arrays cannot be empty");
     }
     let result = [];
     // Normalization

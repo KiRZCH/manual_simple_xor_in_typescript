@@ -21,12 +21,12 @@ function arrayDimensionInteger(question) {
         try {
             const value = Number(answer);
             if (!Number.isInteger(value) || value <= 0) {
-                throw new Error("Inserisci un numero intero maggiore di 0.");
+                throw new Error("Enter an integer greater than 0.");
             }
             return value;
         }
         catch (error) {
-            alert(error instanceof Error ? error.message : "Valore non valido.");
+            alert(error instanceof Error ? error.message : "Invalid value.");
         }
     }
 }
@@ -42,32 +42,33 @@ function arrayDimensionInteger(question) {
 function bitDimensionInteger(question) {
     while (true) {
         const answer = prompt(question);
-        // Annulla l'inserimento senza generare un errore.
+        // Cancel the input without throwing an error.
         if (answer === null)
             return null;
         try {
             const value = Number(answer.trim());
             if (answer.trim() === "" || (value !== 0 && value !== 1)) {
-                throw new Error("Inserisci 0 oppure 1.");
+                throw new Error("Enter 0 or 1.");
             }
             return value;
         }
         catch (error) {
-            alert(error instanceof Error ? error.message : "Valore non valido.");
+            alert(error instanceof Error ? error.message : "Invalid value.");
         }
     }
 }
 /**
  * **main**
  *
- * you know what it does
+ * @import {Binary, xor} from "./binary.ts"
+ *
  * @returns nothing
  */
 function main() {
-    const countsBits1 = arrayDimensionInteger("Quanti bit per array1?");
+    const countsBits1 = arrayDimensionInteger("How many bits for array 1?");
     if (countsBits1 === null)
         return;
-    const countsBits2 = arrayDimensionInteger("Quanti bits per array2?");
+    const countsBits2 = arrayDimensionInteger("How many bits for array 2?");
     if (countsBits2 === null)
         return;
     const binArray = [[], []];
@@ -84,6 +85,6 @@ function main() {
         binArray[1].push(bit);
     }
     const xorResult = (0, binary_1.xor)(binArray[0], binArray[1]);
-    console.log(`XOR\n Array1: ${binArray[0]}\nChiave: ${binArray[1]}Xorred:\n${xorResult}`);
+    console.log(`XOR\n Array 1: ${binArray[0]}\nKey: ${binArray[1]}\nXOR result:\n${xorResult}`);
 }
 main();
