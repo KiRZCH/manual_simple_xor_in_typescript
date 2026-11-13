@@ -5,7 +5,7 @@ import {Binary, xor} from "./binary";
  * **TEST FOR THE XOR FUNCTION**
  *
  * @import {Binary} from "./binary.ts"
- * 
+ *
  * @import {xor} from "./binary.ts"
  *
  * @import {describe, expect, test, expectTypeOf} from "vitest"
@@ -23,6 +23,9 @@ import {Binary, xor} from "./binary";
  * 6. Test: XOR between an empty source and a non-empty key
  *
  * 7. Test: XOR between a non-empty source and an empty key
+ *
+ * @returns nothing
+ * @returns {Error}
  */
 describe("XOR", () => {
 
